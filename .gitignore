@@ -1,0 +1,32 @@
+# Node dependencies
+node_modules/
+
+# Vite build output
+dist/
+client/dist/
+
+# Serverless / Vercel
+.vercel/
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Optional: ignore nested node_modules explicitly
+client/node_modules/
+api/node_modules/
