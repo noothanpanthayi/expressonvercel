@@ -18,7 +18,7 @@ function App() {
 
   return (
     <>
-    <h1>API Data:{apiData?apiData[0].make:'data not found'}</h1>
+    <h1>API Data:{apiData?apiData[0]?.make:'data not found'}</h1>
     </>
   )
 }
