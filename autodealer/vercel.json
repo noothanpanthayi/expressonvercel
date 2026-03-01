@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "npm run build",
   "builds": [
     {
       "src": "api/server.js",
@@ -18,7 +17,7 @@
     },
     {
       "src": "/((?!api/).*)",
-      "dest": "/dist/index.html"
+      "dest": "/index.html"
     }
   ]
 }
