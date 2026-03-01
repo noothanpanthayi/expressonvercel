@@ -2,19 +2,23 @@ import { useEffect, useState } from 'react'
 import './App.css'
 
 function App() {
-  const [apiData, setApiData] = useState(null);
+  interface ApiData {
+    id:string,
+    make:string
+  }
+  const [apiData, setApiData] = useState<ApiData[]>([]);
    useEffect(() => {
     fetch('/api/test')
       .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setApiData(data);
+      .then((response) => {
+        console.log(response);
+        setApiData(response.data);
       });
   }, []);
 
   return (
     <>
-    <h1>API Data:{apiData?apiData:'data not found'}</h1>
+    <h1>API Data:{apiData?apiData[0].make:'data not found'}</h1>
     </>
   )
 }

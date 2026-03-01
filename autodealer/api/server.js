@@ -10,7 +10,15 @@ app.get('/', (req, res) => {
 
 // Test API route
 app.get('/api/test', (req, res) => {
-  res.json({ success: true });
+  res.json({ data: [
+  { 
+    'id':'1001',
+    'make':'Toyota'
+
+  }
+   
+
+  ] });
 });
 
 // JUST EXPORT THE APP - No serverless() wrapper needed
